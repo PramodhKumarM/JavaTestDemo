@@ -6,6 +6,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Docker login
-      run: docker login --username ${{ secrets.docker_user }} --password-stdin ${{ secrets.docker_pass }}
+      run: docker login --username ${{ secrets.docker_user }} --password ${{ secrets.docker_pass }}
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag githubJavaTestDemoImage:$(date +%s)
